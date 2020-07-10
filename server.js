@@ -5,8 +5,8 @@ const GuacamoleLite = require('guacamole-lite');
 const PORT = 8080;
 const CRYPT_SECRET = process.env.CRYPT_SECRET;
 const CRYPT_CYPHER = process.env.CRYPT_CYPHER || 'AES-256-CBC';
-const GUACD_HOST = process.env.PORT || '127.0.0.1';
-const GUACD_PORT = process.env.PORT || 4822;
+const GUACD_HOST = process.env.GUACD_HOST || '127.0.0.1';
+const GUACD_PORT = process.env.GUACD_PORT || 4822;
 
 function start(cryptKey, cryptCypher , websocketPort , guacdHost, guacdPort) {
     if (!cryptKey || cryptKey.length === 0) {
@@ -36,5 +36,6 @@ function start(cryptKey, cryptCypher , websocketPort , guacdHost, guacdPort) {
     return new GuacamoleLite(websocketOptions, guacdOptions, clientOptions);
 }
 
+console.log(process.env);
 const server = start(CRYPT_SECRET, CRYPT_CYPHER, PORT, GUACD_HOST, GUACD_PORT);
 console.info('[GUACAMOLE] WebSocket Tunnel running on ws://0.0.0.0:' + PORT);
