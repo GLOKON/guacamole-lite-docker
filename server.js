@@ -36,6 +36,5 @@ function start(cryptKey, cryptCypher , websocketPort , guacdHost, guacdPort) {
     return new GuacamoleLite(websocketOptions, guacdOptions, clientOptions);
 }
 
-console.log(process.env);
 const server = start(CRYPT_SECRET, CRYPT_CYPHER, PORT, GUACD_HOST, GUACD_PORT);
 console.info('[GUACAMOLE] WebSocket Tunnel running on ws://0.0.0.0:' + PORT);
