@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- '12'
+env:
+  matrix:
+  - NODE_ENV=travis
+branches:
+  only:
+  - master
+cache:
+  directories:
+  - node_modules
+services:
+- docker
+before_install:
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+install:
+- npm install
+- npm test
+- docker build -t glokon/guacamole-lite-docker:1.0.0 .
+- docker tag glokon/guacamole-lite-docker:1.0.0 glokon/guacamole-lite-docker:latest
+- docker push glokon/guacamole-lite-docker:1.0.0
+- docker push glokon/guacamole-lite-docker:latest

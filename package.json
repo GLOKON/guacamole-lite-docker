@@ -1,0 +1,37 @@
+{
+  "name": "guacamole-lite-docker",
+  "version": "1.0.0",
+  "description": "Docker image for Guacamole-Lite",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GLOKON/guacamole-lite-docker.git"
+  },
+  "keywords": [
+    "guacamole",
+    "guacamole-lite",
+    "docker"
+  ],
+  "author": "GLOKON Limited",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GLOKON/guacamole-lite-docker/issues"
+  },
+  "homepage": "https://github.com/GLOKON/guacamole-lite-docker#readme",
+  "dependencies": {
+    "guacamole-lite": "^0.6.2"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
