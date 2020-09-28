@@ -1,5 +1,5 @@
 {
-  "name": "guacamole-lite-docker",
+  "name": "@glokon/guacamole-lite-docker",
   "version": "1.0.0",
   "description": "Docker image for Guacamole-Lite",
   "main": "server.js",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/GLOKON/guacamole-lite-docker#readme",
   "dependencies": {
-    "guacamole-lite": "^0.6.2"
+    "@glokon/guacamole-lite": "^0.6.2"
   },
   "devDependencies": {
     "jest": "^26.1.0"
