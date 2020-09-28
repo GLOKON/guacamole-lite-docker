@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/GLOKON/guacamole-lite-docker#readme",
   "dependencies": {
-    "@glokon/guacamole-lite": "^0.7.0"
+    "@glokon/guacamole-lite": "^0.7.1"
   },
   "devDependencies": {
-    "jest": "^26.1.0"
+    "jest": "^26.4.2"
   },
   "jest": {
     "testEnvironment": "node",

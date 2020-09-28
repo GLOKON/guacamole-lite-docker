@@ -7,6 +7,7 @@ const CRYPT_SECRET = process.env.CRYPT_SECRET;
 const CRYPT_CYPHER = process.env.CRYPT_CYPHER || 'AES-256-CBC';
 const GUACD_HOST = process.env.GUACD_HOST || '127.0.0.1';
 const GUACD_PORT = process.env.GUACD_PORT || 4822;
+const LOG_LEVEL = process.env.GUACD_LOG_LEVEL || 20;
 
 function start(cryptKey, cryptCypher , websocketPort , guacdHost, guacdPort) {
     if (!cryptKey || cryptKey.length === 0) {
@@ -24,6 +25,9 @@ function start(cryptKey, cryptCypher , websocketPort , guacdHost, guacdPort) {
     };
 
     const clientOptions = {
+        log: {
+            level: LOG_LEVEL,
+        },
         crypt: {
             cypher: cryptCypher,
             key: cryptKey
