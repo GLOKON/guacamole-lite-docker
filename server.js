@@ -1,6 +1,6 @@
 'use strict';
 
-const GuacamoleLite = require('guacamole-lite');
+const GuacamoleLite = require('@glokon/guacamole-lite');
 
 const PORT = 8080;
 const CRYPT_SECRET = process.env.CRYPT_SECRET;
